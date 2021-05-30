@@ -1,6 +1,7 @@
 package study.datajpa.repository;
 
 import org.springframework.stereotype.Repository;
+import study.datajpa.entity.Member;
 import study.datajpa.entity.Team;
 
 import javax.persistence.EntityManager;
@@ -37,5 +38,4 @@ public class TeamJpaRepository {
         return em.createQuery("select count(t) from Team t", Long.class)
                 .getSingleResult();
     }
-
 }
